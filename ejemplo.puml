@@ -1,0 +1,9 @@
+@startuml
+    class Animal {
+
+    }
+    class Perro extends Animal {
+
+    }
+        Animal<|-- Perro
+@enduml
