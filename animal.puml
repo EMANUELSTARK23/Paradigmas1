@@ -1,0 +1,59 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+abstract class Animal {
+    # nombre: String
+    # energia: int
+    + Animal(nombre: String)
+    + {abstract} hacerSonido(): void
+    + {abstract} moverse(): void
+    + dormir(): void
+    + comer(): void
+}
+
+class Perro {
+    - raza: String
+    + Perro(nombre: String, raza: String)
+    + hacerSonido(): void
+    + traerObjeto(): void
+    + moverse(): void
+}
+
+class Gato {
+    - color: String
+    + Gato(nombre: String, color: String)
+    + hacerSonido(): void
+    + rasgunar(): void
+    + moverse(): void
+}
+
+class Pajaro {
+    - envergaduraAlas: double
+    + Pajaro(nombre: String, envergadura: double)
+    + hacerSonido(): void
+    + volar(): void
+    + moverse(): void
+}
+
+class Serpiente {
+    - tipoVeneno: String
+    + Serpiente(nombre: String, tipoVeneno: String)
+    + hacerSonido(): void
+    + moverse(): void
+}
+
+class Pez {
+    - tipoAgua: String
+    + Pez(nombre: String, tipoAgua: String)
+    + hacerSonido(): void
+    + moverse(): void
+}
+
+' Relaciones de herencia (Las flechas apuntan hacia la clase padre)
+Animal <|-- Perro
+Animal <|-- Gato
+Animal <|-- Pajaro
+Animal <|-- Serpiente
+Animal <|-- Pez
+
+@enduml
