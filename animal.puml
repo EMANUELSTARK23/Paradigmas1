@@ -1,4 +1,4 @@
-@startuml
+@startuml animal
 skinparam classAttributeIconSize 0
 
 abstract class Animal {

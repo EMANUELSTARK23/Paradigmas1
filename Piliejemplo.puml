@@ -1,0 +1,28 @@
+@startuml figuras
+skinparam classAttributeIconSize 0
+
+class Figura {
+    + dibujar(): void
+}
+
+class Circulo {
+    + dibujar(): void
+}
+
+class Triangulo {
+    + dibujar(): void
+}
+
+class Cuadro {
+    + dibujar(): void
+}
+
+class EjemploPoli {
+    + main(args: String[]): void
+}
+
+Figura <|-- Circulo
+Figura <|-- Triangulo
+Figura <|-- Cuadro
+EjemploPoli ..> Figura : usa
+@enduml
